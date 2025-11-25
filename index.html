@@ -1,0 +1,121 @@
+<!DOCTYPE html> 
+<html lang="ja">
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Crown Girls 公式サイト | TOP</title> 
+  <link rel="stylesheet" href="css/style.css"> 
+  <link rel="icon" href="image/logo.png"> 
+</head>
+
+<body class="page-index"> 
+  <div id="top"></div>
+
+<header>
+  <a href="index.html" class="logo"> 
+    <img src="image/logo.png" alt="Crown Girls ロゴ"> 
+  </a> 
+  <nav> 
+    <ul> 
+      <li>
+        <a href="index.html" class="nav-item active"> 
+          <span class="nav-main">TOP</span> 
+          <span class="nav-sub">トップ</span> 
+        </a> 
+      </li> 
+
+      <li> 
+        <a href="profile.html" class="nav-item">
+          <span class="nav-main">PROFILE</span>
+          <span class="nav-sub">プロフィール</span> 
+        </a> 
+      </li> 
+      
+      <li> 
+        <a href="schedule.html" class="nav-item">
+           <span class="nav-main">SCHEDULE</span>
+           <span class="nav-sub">スケジュール</span>
+        </a> 
+      </li> 
+      
+      <li> 
+        <a href="discography.html" class="nav-item">
+           <span class="nav-main">DISCOGRAPHY</span>
+           <span class="nav-sub">ディスコグラフィー</span>
+        </a>
+      </li>
+       
+      <li> 
+        <a href="goods.html" class="nav-item">
+           <span class="nav-main">GOODS</span> 
+           <span class="nav-sub">グッズ</span> 
+        </a> 
+      </li> 
+    </ul> 
+  </nav> 
+</header>
+
+<div class="header-space"></div>
+
+<div class="firstview">
+  <div class="image src1"></div>
+  <div class="image src2"></div>
+  <div class="image src3"></div>
+</div>
+
+<a class="pagetop-button" href="#top">
+  <img src="image/pagetopbutton.png" alt="">
+  <p>TOP</p>
+</a>
+
+<main>
+   <section class="about">
+     <h1>About</h1><br> 
+     <h2>ベーカリー ラ・ファンへようこそ！！</h2><br><br> 
+     <p> 当店は原材料にこだわり、丁寧に生地から仕込んで<br><br>
+       "スクラッチ製法"&nbsp;でパンを作っています。<br><br>
+       大網白里市で32年、令和7年2月から木更津市へ移転しました。<br><br>
+       親子で頑張っていますのでよろしくお願いします！ </p> 
+   </section> 
+   
+   <section class="news"> 
+    <h1>News</h1><br> 
+    <p>最新情報をこちらでお知らせします。</p><br> 
+    <p>新商品の紹介やイベント情報も随時更新！</p> 
+   </section> 
+   
+   <section class="instagram"> 
+    <h1>Instagram</h1><br> 
+    <p>公式Instagramもぜひチェックしてください！</p> 
+   </section> 
+   
+   <br><br><br><br><br> 
+</main>
+
+<footer> 
+  <img src="image/logo.png" alt="Crown Girls ロゴ"> 
+  
+  <div class="footer-links"> 
+    <a href="index.html">TOP</a> | 
+    <a href="profile.html">PROFILE</a> | 
+    <a href="schedule.html">SCHEDULE</a> | 
+    <a href="discography.html">DISCOGRAPHY</a> | 
+    <a href="goods.html">GOODS</a> 
+  </div> 
+  
+  <p class="copyright">&copy; <span id="year"></span> Crown Girls All Rights Reserved.</p> 
+</footer>
+
+<script> 
+// ページトップボタン制御 
+  const pagetopButton = document.querySelector('.pagetop-button'); 
+  window.addEventListener('scroll', () => {
+    pagetopButton.classList.toggle('show', window.scrollY > 200);
+  }); 
+
+// 年号自動更新
+  document.getElementById("year").textContent = new Date().getFullYear(); 
+</script> 
+
+</body> 
+</html>
