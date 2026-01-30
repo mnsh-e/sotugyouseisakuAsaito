@@ -12,41 +12,16 @@
   <div id="top"></div>
 
   <header>
-    <a href="index.html" class="logo">
+    <a href="goods.html" class="logo">
       <img src="image/logo.png" alt="Crown Girls ロゴ">
     </a>
     <nav>
       <ul>
-        <li>
-          <a href="index.html" class="nav-item">
-            <span class="nav-main">TOP</span>
-            <span class="nav-sub">トップ</span>
-          </a>
-        </li>
-        <li>
-          <a href="profile.html" class="nav-item">
-            <span class="nav-main">PROFILE</span>
-            <span class="nav-sub">プロフィール</span>
-          </a>
-        </li>
-        <li>
-          <a href="schedule.html" class="nav-item">
-            <span class="nav-main">SCHEDULE</span>
-            <span class="nav-sub">スケジュール</span>
-          </a>
-        </li>
-        <li>
-          <a href="discography.html" class="nav-item">
-            <span class="nav-main">DISCOGRAPHY</span>
-            <span class="nav-sub">ディスコグラフィー</span>
-          </a>
-        </li>
-        <li>
-          <a href="goods.html" class="nav-item active">
-            <span class="nav-main">GOODS</span>
-            <span class="nav-sub">グッズ</span>
-          </a>
-        </li>
+        <li><a href="index.html" class="nav-item"><span class="nav-main">TOP</span><span class="nav-sub">トップ</span></a></li>
+        <li><a href="profile.html" class="nav-item"><span class="nav-main">PROFILE</span><span class="nav-sub">プロフィール</span></a></li>
+        <li><a href="news.html" class="nav-item"><span class="nav-main">NEWS</span><span class="nav-sub">ニュース</span></a></li>
+        <li><a href="discography.html" class="nav-item"><span class="nav-main">DISCOGRAPHY</span><span class="nav-sub">ディスコグラフィー</span></a></li>
+        <li><a href="goods.html" class="nav-item active"><span class="nav-main">GOODS</span><span class="nav-sub">グッズ</span></a></li>
       </ul>
     </nav>
   </header>
@@ -59,37 +34,55 @@
   </a>
 
   <main>
+    <section class="group">
+      <h1>Goods</h1>
 
+      <div class="container">
+        <div class="item">
+          <img src="image/goods1.png" alt="">
+          <p class="title">メンバー集合うちわ</p>
+          <p class="price">¥800</p>
+        </div>
 
+        <div class="item">
+          <img src="image/goods2.png" alt="">
+          <p class="title">メンバー個別うちわ</p>
+          <p class="price">各種¥800</p>
+        </div>
 
+        <div class="item">
+          <img src="image/goods3.png" alt="">
+          <p class="title">タオル（グループ）</p>
+          <p class="price">¥1,000</p>
+        </div>
 
-    
-    <br><br><br><br><br>
+        <div class="item">
+          <img src="image/goods8.jpg" alt="">
+          <p class="title">6色ペンライト</p>
+          <p class="price">¥8,000</p>
+        </div>
+      </div>
 
+    </section>
   </main>
 
   <footer>
-    <img src="image/logo.png" alt="Crown Girls ロゴ">
-
+    <img src="image/logo.png" alt="">
     <div class="footer-links">
       <a href="index.html">TOP</a> |
       <a href="profile.html">PROFILE</a> |
-      <a href="schedule.html">SCHEDULE</a> |
+      <a href="news.html">NEWS</a> |
       <a href="discography.html">DISCOGRAPHY</a> |
       <a href="goods.html">GOODS</a>
     </div>
-
-    <p class="copyright">&copy; <span id="year"></span> Crown Girls All Rights Reserved.</p>
+    <p class="copyright">&copy; <span id="year"></span> Crown Girls</p>
   </footer>
 
   <script>
-    // ページトップボタン制御
-    const pagetopButton = document.querySelector('.pagetop-button');
+    const btn = document.querySelector('.pagetop-button');
     window.addEventListener('scroll', () => {
-      pagetopButton.classList.toggle('show', window.scrollY > 200);
+      btn.classList.toggle('show', window.scrollY > 200);
     });
-
-    // 年号自動更新
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>

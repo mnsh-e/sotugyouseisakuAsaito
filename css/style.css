@@ -1,5 +1,7 @@
 * { 
-  margin: 0; padding: 0; box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
 } 
 
 html { 
@@ -115,34 +117,42 @@ nav a.nav-item:hover {
 }
 
 .pagetop-button.show {
-  opacity: 1; pointer-events: auto;
+  opacity: 1; 
+  pointer-events: auto;
 }
 
-.about, .news, .instagram {
+.about, .news, .group {
+  text-align: center;
+  margin-top: 35px;
+  color: #333;
+}
+
+.todaysnews-item {
+  margin-top: -30px;
+}
+
+.todaysnews, .sns, .member {
   text-align: center;
   margin-top: 100px;
   color: #333;
 }
 
-.about h1, .news h1, .instagram h1 {
+.sns, .member {
+  margin-bottom: -50px;
+}
+
+.about h1, .todaysnews h1, .group h1, .sns h1, .member h1, .news h1 {
   width: 60%;
   margin: 0 auto 15px;
   border-bottom: 3px solid #5da89c;
   padding-bottom: 6px;
 }
 
-.about h2 {
-  letter-spacing: 4.5px;
-  display: inline-block;
-  border-bottom: 3px solid #c1f5a9;
-  padding-bottom: 6px;
-  margin-bottom: 15px;
-}
-
-.about p, .news p, .instagram p {
+.about p, .group p, .todaysnews p, .sns p {
   font-size: 14pt;
   letter-spacing: 2px;
   color: #333;
+  margin: 0 170px;
 }
 
 footer {
@@ -203,14 +213,14 @@ footer .copyright {
 
 
 /* index.html の CSS */
-.page-index .firstview {
+.firstview {
   height: calc(100vh + 100px);
   position: relative;
   overflow: hidden;
   margin-top: 10px;
 }
 
-.page-index .image {
+.image {
   position: absolute;
   inset: 0;
   opacity: 0;
@@ -220,9 +230,9 @@ footer .copyright {
   animation: image-switch-animation 24s infinite;
 }
 
-.page-index .src1 { background-image: url("../image/ChatGPT Image top.png"); }
-.page-index .src2 { background-image: url("../image/kari2.jpg"); }
-.page-index .src3 { background-image: url("../image/kari3.jpg"); }
+.src1 { background-image: url("../image/ChatGPT Image top.png"); }
+.src2 { background-image: url("../image/kari2.jpg"); }
+.src3 { background-image: url("../image/kari3.jpg"); }
 
 @keyframes image-switch-animation {
    0% { opacity: 0; }
@@ -232,17 +242,44 @@ footer .copyright {
    100% { opacity: 0; }
   }
   
-.page-index .image:nth-of-type(1) {
+.image:nth-of-type(1) {
    animation-delay: 0s;
   }
   
-.page-index .image:nth-of-type(2) {
+.image:nth-of-type(2) {
    animation-delay: 8s;
   }
    
-.page-index .image:nth-of-type(3) {
+.image:nth-of-type(3) {
    animation-delay: 16s;
   }
+
+.sns-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px; /* アイコン間の余白 */
+  margin-top: 30px;
+}
+
+.sns-item {
+  display: inline-flex;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.sns-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.sns-item:hover {
+  transform: scale(1.15);
+}
 
 
 
@@ -252,4 +289,240 @@ footer .copyright {
 
 
   /*profile.html の CSS*/
-  
+.member {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+.FujisakiRiko, .SakuraiAiri, .OnodaHina, .KiseNatsuki, .TatibanaMiduki, .YamamotoReina {
+    width: calc(100% / 3);
+    text-align: center;
+    padding: 10px 0;
+    margin: 0 -27px;
+  }
+
+ .FujisakiRiko p, .SakuraiAiri p, .OnodaHina p, .KiseNatsuki p, .TatibanaMiduki p, .YamamotoReina p, .p2 .kana, .p2 .position {
+    font-size: 10pt;
+  }
+
+ .page-profile .member img {
+    width: 250px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.5s;
+  }
+
+ .page-profile .member img:hover {
+    transform: scale(1.1);
+  }
+
+ .member-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 0;
+  }
+
+ .p1,.p2 {
+    margin-top: 50px;
+  }
+
+ .name img {
+    width:300px;
+    border-radius: 20px;
+  }
+
+ .name {
+    display: flex;
+    justify-content: center;
+    width: 800px;
+    margin: 0 auto 35px;
+  }
+
+ .p2 {
+    margin-left: 20px;
+  }
+
+ dl {
+    display: grid;
+    grid-template-columns: 150px 1fr; /* dt が150px、dd が残り全部 */
+    row-gap: 8px;
+  }
+
+ dt {
+    font-weight: bold;
+  }
+
+ dd {
+    margin-left: 0; /* ブラウザのデフォルト余白を消す */
+  }
+
+
+
+
+
+/*news.html の CSS*/
+.news {
+  text-align: center;
+  margin-top: 35px;
+}
+
+.todaysnews h1, .news h1 {
+  margin: 0 auto 30px;
+  padding-bottom: 6px;
+}
+
+.todaysnews-list, .news-list {
+  max-width: 900px;
+  margin: 0 auto 80px;
+  padding: 0 20px;
+}
+
+.todaysnews-item, .news-item {
+  background: #fff;
+  padding: 18px 20px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  text-align: left;
+}
+
+.todaysnews-meta, .news-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.date {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.category {
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.category.tv {
+  background-color: #3f6fff;
+}
+
+.category.radio {
+  background-color: #ff7a3f;
+}
+
+.category.magazine {
+  background-color: #6bbf59;
+}
+
+.category.release {
+  background-color: #d953c1;
+}
+
+.news-title {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+
+
+
+
+
+
+
+/*discography.html の CSS*/
+.release-list {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.release-item {
+  text-align: center;
+}
+
+.release-item .thumb img {
+  width: 100%;
+  border-radius: 4px;
+  display: block;
+}
+
+.meta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.tag {
+  border: 1px solid #3fa2ff;
+  color: #3fa2ff;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.title {
+  font-size: 1rem;
+  margin-top: 10px;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+/*goods.html の CSS */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.item {
+  text-align: center;
+}
+
+.item img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.group .item .title {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 12px 0 6px;
+}
+
+.group .item .price {
+  font-weight: bold;
+  color: #333;
+  font-size: 1rem;
+}
+
+.group p {
+  margin: 0;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crown Girls 公式サイト | 桜井 愛莉</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="sakurai">
+  <header>
+    <a href="sakuraiairi.html" class="logo">
+      <img src="image/logo.png" alt="Crown Girls ロゴ">
+    </a>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html" class="nav-item">
+            <span class="nav-main">TOP</span>
+            <span class="nav-sub">トップ</span>
+          </a>
+        </li>
+        <li>
+          <a href="profile.html" class="nav-item active">
+            <span class="nav-main">PROFILE</span>
+            <span class="nav-sub">プロフィール</span>
+          </a>
+        </li>
+        <li> 
+          <a href="news.html" class="nav-item">
+            <span class="nav-main">NEWS</span>
+            <span class="nav-sub">ニュース</span>
+          </a> 
+        </li>
+        <li>
+          <a href="discography.html" class="nav-item">
+            <span class="nav-main">DISCOGRAPHY</span>
+            <span class="nav-sub">ディスコグラフィー</span>
+          </a>
+        </li>
+        <li>
+          <a href="goods.html" class="nav-item">
+            <span class="nav-main">GOODS</span>
+            <span class="nav-sub">グッズ</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="header-space"></div>
+
+  <a class="pagetop-button" href="#top">
+    <img src="image/pagetopbutton.png" alt="">
+    <p>TOP</p>
+  </a>
+
+  <div class="name">
+    <div class="p1">
+      <img src="image/SakuraiAiri hiki.png" alt="">
+    </div>
+
+    <div class="p2">
+      <h3>桜井 愛莉</h3>
+      <p class="kana">さくらい あいり</p>
+      <p class="position">サブリーダー</p><br>
+
+      <dl>
+        <dt>メンバーカラー</dt>
+          <dd>ピンク</dd>
+        <dt>生年月日</dt>
+          <dd>2000/03/21</dd>
+        <dt>年齢</dt>
+          <dd>25歳</dd>
+        <dt>血液型</dt>
+          <dd>B型</dd>
+        <dt>出身地</dt>
+          <dd>神奈川県</dd>
+        <dt>身長</dt>
+          <dd>158.2cm</dd>
+        <dt>趣味</dt>
+          <dd>アニメや映画を見ること</dd>
+        <dt>特技</dt>
+          <dd>絵を描くこと</dd>
+      </dl>
+    </div>
+  </div>
+
+  <footer>
+    <img src="image/logo.png" alt="Crown Girls ロゴ">
+
+    <div class="footer-links">
+      <a href="index.html">TOP</a> |
+      <a href="profile.html">PROFILE</a> |
+      <a href="news.html">NEWS</a> |
+      <a href="discography.html">DISCOGRAPHY</a> |
+      <a href="goods.html">GOODS</a>
+    </div>
+
+    <p class="copyright">&copy; <span id="year"></span> Crown Girls All Rights Reserved.</p>
+  </footer>
+  <script>
+    // ページトップボタン制御
+    const pagetopButton = document.querySelector('.pagetop-button');
+    window.addEventListener('scroll', () => {
+      pagetopButton.classList.toggle('show', window.scrollY > 200);
+    });
+
+    // 年号自動更新
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+      
