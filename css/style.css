@@ -227,32 +227,27 @@ footer .copyright {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center top;
-  animation: image-switch-animation 24s infinite;
+  animation: image-switch-animation 16s infinite;
 }
 
-.src1 { background-image: url("../image/ChatGPT Image top.png"); }
-.src2 { background-image: url("../image/kari2.jpg"); }
-.src3 { background-image: url("../image/kari3.jpg"); }
+.src1 { background-image: url("../image/firstview top1.png"); }
+.src2 { background-image: url("../image/firstview top2.png"); }
 
 @keyframes image-switch-animation {
-   0% { opacity: 0; }
-   8% { opacity: 1; }
-   33% { opacity: 1; }
-   40% { opacity: 0; }
-   100% { opacity: 0; }
-  }
+  0%   { opacity: 0; }
+  15%  { opacity: 1; }
+  45%  { opacity: 1; }
+  55%  { opacity: 0; }
+  100% { opacity: 0; }
+}
   
 .image:nth-of-type(1) {
-   animation-delay: 0s;
-  }
-  
+  animation-delay: 0s;
+}
+
 .image:nth-of-type(2) {
-   animation-delay: 8s;
-  }
-   
-.image:nth-of-type(3) {
-   animation-delay: 16s;
-  }
+  animation-delay: 8s;
+}
 
 .sns-links {
   display: flex;
@@ -451,12 +446,27 @@ footer .copyright {
 
 .release-item {
   text-align: center;
+  margin-bottom: 80px;
 }
 
-.release-item .thumb img {
-  width: 100%;
-  border-radius: 4px;
-  display: block;
+.release-item .thumb {
+  display: flex;
+  justify-content: center;
+}
+
+.release-item .thumb img.noimage {
+  width: 70%;
+  opacity: 0.8;
+}
+
+.release-item .title {
+  width: 70%;
+  margin: 10px auto 0;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 10px;
+  line-height: 1.5;
+  font-weight: bold;
 }
 
 .meta {
@@ -477,14 +487,6 @@ footer .copyright {
   border-radius: 4px;
 }
 
-.title {
-  font-size: 1rem;
-  margin-top: 10px;
-  line-height: 1.5;
-  font-weight: bold;
-}
-
-
 
 
 
@@ -502,6 +504,7 @@ footer .copyright {
 
 .item {
   text-align: center;
+  margin-bottom: 80px;
 }
 
 .item img {
